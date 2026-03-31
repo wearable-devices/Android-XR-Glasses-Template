@@ -5,18 +5,18 @@
 ---
 
 ## Table of Contents
-1. [Section 1: Prerequisites & Setup](#section-1-prerequisites--setup)
-2. [Section 2: SDK Setup](#section-2-sdk-setup)
-3. [Section 3: Quick Start from a GitHub template](#section-3-quick-start-using-the-template-repo)
-4. [Section 4: Creating an AI Glasses Project](#section-4-creating-an-ai-glasses-project)
-5. [Section 5: Project Dependencies & Gradle Config](#section-5-project-dependencies--gradle-config)
-6. [Section 6: Android Virtual Device (AVD) Creation](#section-6-android-virtual-device-avd-creation)
-7. [Section 7: Running the App](#section-7-running-the-app)
-8. [Section 8: Developer Tips](#section-8-developer-tips)
+1. [Prerequisites & Setup](#prerequisites--setup)
+2. [SDK Setup](#sdk-setup)
+3. [Quick Start](#quick-start-using-the-template-repo)
+4. [Creating an AI Glasses Project](#creating-an-ai-glasses-project)
+5. [Project Dependencies & Gradle Config](#project-dependencies--gradle-config)
+6. [Android Virtual Device (AVD) Creation](#android-virtual-device-avd-creation)
+7. [Running the App](#running-the-app)
+8. [Developer Tips](#developer-tips)
 
 ---
 
-## Section 1: Prerequisites & Setup
+## Prerequisites & Setup
 
 To develop for AI Glasses, you must use **Android Studio Canary**.
 
@@ -27,7 +27,7 @@ To develop for AI Glasses, you must use **Android Studio Canary**.
 
 ---
 
-## Section 2: SDK Setup
+## SDK Setup
 
 ### 1. Install SDK 36
 
@@ -50,7 +50,7 @@ To develop for AI Glasses, you must use **Android Studio Canary**.
 
 ---
 
-## Section 3: Quick Start: Using the Template Repo
+## Quick Start: Using the Template Repo
 
 Now that your environment is ready, you can either clone the pre-configured template or set up a project manually.
 
@@ -59,7 +59,7 @@ If you don't want to configure a project manually from scratch, you can clone th
 2. Copy the repo URL and run: `git clone https://github.com/wearable-devices/AndroidAIGlassesTemplate.git`
 3. Open the cloned folder in Android Studio Canary.
 
-*(Note: If you clone this repo, you can skip straight to **[Section 6: Android Virtual Device (AVD) Creation](#section-6-android-virtual-device-avd-creation)**, as the code and dependencies are already configured!)*
+*(Note: If you clone this repo, you can skip straight to **[Android Virtual Device (AVD) Creation](#android-virtual-device-avd-creation)**, as the code and dependencies are already configured!)*
 
 After cloning, rename the project to match your app:
 
@@ -77,7 +77,7 @@ Choose your new package name and Click **Refactor**. Android Studio will update 
 
 ---
 
-## Section 4: Creating an AI Glasses Project
+## Creating an AI Glasses Project
 1. In Android Studio Canary, click on **File > New > New Project**.
 2. On the template list go to  **XR**.
 3. Choose **Basic AI Glasses Activity**
@@ -91,7 +91,7 @@ Choose your new package name and Click **Refactor**. Android Studio will update 
 
 ---
 
-## Section 5: Project Dependencies & Gradle Config
+## Project Dependencies & Gradle Config
 
 Update the project dependencies to match the required AI Glasses libraries:
 
@@ -152,7 +152,7 @@ android:requiredDisplayCategory="xr_projected" >
 
 ---
 
-## Section 6: Android Virtual Device (AVD) Creation
+## Android Virtual Device (AVD) Creation
 In order to test and run your app on the emulator, you will need to create an **Android Virtual Device (AVD)** for both the phone and the AI Glasses.
 
 ### 6.1. Host Phone AVD
@@ -201,7 +201,7 @@ Now, create the companion emulator for the glasses themselves:
 
 ---
 
-## Section 7: Running the App
+## Running the App
 
 With your devices paired, you can now run your application on the emulator!
 
@@ -216,7 +216,7 @@ With your devices paired, you can now run your application on the emulator!
 
 ---
 
-## Section 8: Developer Tips
+## Developer Tips
 
 ### 1. Removing White Corners and Borders
 
