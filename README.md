@@ -63,9 +63,17 @@ If you don't want to configure a project manually from scratch, you can clone th
 
 After cloning, rename the project to match your app:
 
-4. **App name:** Open `app/src/main/res/values/strings.xml` and update the `app_name` value.
-5. **Package name:** In Android Studio, right-click the `com.example.template` package → **Refactor > Rename** and enter your new package name. Android Studio will update all references automatically.
-6. **Application ID:** Open `app/build.gradle.kts` and update the `applicationId` field to match your new package name.
+4. **App name:** Open `app/res/values/strings.xml` and update the `app_name` value.
+![Rename app name](images/Rename_app_name.png)
+5. **Package name:** In Android Studio, right-click the `com.example.template` package → **Rename**.
+![Rename package](images/Rename_Package.png)
+A pop-up window will open. Click All Directories.
+![All_Directories](images/All_Directories.png)
+Choose your new package name and Click **Refactor**. Android Studio will update all references automatically.
+![Package_Refactor](images/Package_Refactor.png)
+6. **Application ID:** Open `Gradle Scripts/build.gradle.kts (Module: App` and update the `applicationId` field to match your new package name.
+![Application_ID](images/Application_Id.png)
+7. Run your project.
 
 ---
 
