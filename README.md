@@ -7,7 +7,7 @@
 ## Table of Contents
 1. [Prerequisites & Setup](#prerequisites--setup)
 2. [SDK Setup](#sdk-setup)
-3. [Quick Start](#quick-start-using-the-template-repo)
+3. [Quick Start](#quick-start)
 4. [Creating an AI Glasses Project](#creating-an-ai-glasses-project)
 5. [Project Dependencies & Gradle Config](#project-dependencies--gradle-config)
 6. [Android Virtual Device (AVD) Creation](#android-virtual-device-avd-creation)
@@ -50,16 +50,14 @@ To develop for AI Glasses, you must use **Android Studio Canary**.
 
 ---
 
-## Quick Start: Using the Template Repo
+## Quick Start
 
-Now that your environment is ready, you can either clone the pre-configured template or set up a project manually.
+Now that your environment is ready, you can either clone the pre-configured repo or set up a project manually.
 
 If you don't want to configure a project manually from scratch, you can clone the pre-configured repo:
 1. Go to https://github.com/wearable-devices/AndroidAIGlassesTemplate
 2. Copy the repo URL and run: `git clone https://github.com/wearable-devices/AndroidAIGlassesTemplate.git`
 3. Open the cloned folder in Android Studio Canary.
-
-*(Note: If you clone this repo, you can skip straight to **[Android Virtual Device (AVD) Creation](#android-virtual-device-avd-creation)**, as the code and dependencies are already configured!)*
 
 After cloning, rename the project to match your app:
 
@@ -71,9 +69,11 @@ A pop-up window will open. Click All Directories.
 ![All_Directories](docs/All_Directories.png)
 Choose your new package name and Click **Refactor**. Android Studio will update all references automatically.
 ![Package_Refactor](docs/Package_Refactor.png)
-6. **Application ID:** Open `Gradle Scripts/build.gradle.kts (Module: App` and update the `applicationId` field to match your new package name.
+6. **Application ID:** Open `Gradle Scripts/build.gradle.kts (Module: App)` and update the `applicationId` field to match your new package name.
 ![Application_ID](docs/Application_Id.png)
 7. Run your project.
+
+*(Note: If you clone this repo, you can skip straight to **[Android Virtual Device (AVD) Creation](#android-virtual-device-avd-creation)**, as the code and dependencies are already configured!)*
 
 ---
 
@@ -95,7 +95,7 @@ Choose your new package name and Click **Refactor**. Android Studio will update 
 
 Update the project dependencies to match the required AI Glasses libraries:
 
-### 5.1. libs.versions.toml
+### libs.versions.toml
 
 1. Under the **Gradle Scripts** group, open `libs.versions.toml`.
 2. In the `[versions]` block, update the existing variables to the following versions:
@@ -119,7 +119,7 @@ androidx-xr-runtime = { group = "androidx.xr.runtime", name = "runtime", version
 androidx-xr-arcore = { group = "androidx.xr.arcore", name = "arcore", version.ref = "xrArcore" }
 ```
 
-### 5.2. app/build.gradle.kts
+### app/build.gradle.kts
 
 1. Open the module-level `build.gradle.kts` (Module: app).
 2. Inside the `dependencies` block, add the new XR libraries you just defined:
@@ -135,7 +135,7 @@ dependencies {
 3. Click **Sync Now** At the top of the page to download the new Gradle configuration.
 ![Sync Now](docs/Sync_Now.png)
 
-### 5.3. AndroidManifest.xml
+### AndroidManifest.xml
 
 1. Open `app/manifests/AndroidManifest.xml`.
 2. Locate the following attribute inside your `<activity>` tag (which is located inside `<application>`):
@@ -155,7 +155,7 @@ android:requiredDisplayCategory="xr_projected" >
 ## Android Virtual Device (AVD) Creation
 In order to test and run your app on the emulator, you will need to create an **Android Virtual Device (AVD)** for both the phone and the AI Glasses.
 
-### 6.1. Host Phone AVD
+### Host Phone AVD
 
 Because AI Glasses act as a paired companion device, you must first create a standard mobile phone AVD to host the connection.
 
@@ -174,7 +174,7 @@ Because AI Glasses act as a paired companion device, you must first create a sta
 ![System Image Selection](docs/API_Canary.png)
 8. Click **Finish**.
 
-### 6.2. AI Glasses AVD
+### AI Glasses AVD
 
 Now, create the companion emulator for the glasses themselves:
 
@@ -191,7 +191,7 @@ Now, create the companion emulator for the glasses themselves:
 7. Click **Finish**
 
 
-### 6.3. Pairing the AVDs
+### Pairing the AVDs
 
 1. Launch **both** the Phone AVD and the AI Glasses AVD from your **Device Manager** by clicking the **Run** (Play) button.
 2. Still in the **Device Manager**, click the three dots next to the **AI Glasses** AVD and click **Pair Glasses**.
