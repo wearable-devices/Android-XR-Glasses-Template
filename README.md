@@ -57,10 +57,10 @@ To develop for AI Glasses, you must use **Android Studio Canary**.
 
 Now that your environment is ready, you can either clone the pre-configured template or set up a project manually.
 
-If you don't want to configure a project manually from scratch, you can clone the pre-configured template:
-1. Go to Insert git hub link
-2. Click the green **Use this template** button to create your own repository.
-3. `git clone` your new repository and open it in Android Studio Canary.
+If you don't want to configure a project manually from scratch, you can clone the pre-configured repo:
+1. Go to https://github.com/wearable-devices/AndroidAIGlassesTemplate
+2. Copy the repo URL and run: `git clone https://github.com/wearable-devices/AndroidAIGlassesTemplate.git`
+3. Open the cloned folder in Android Studio Canary.
 
 *(Note: If you use the template, you can skip straight to **[Section 5: Android Virtual Device (AVD) Creation](#section-5-android-virtual-device-avd-creation)**, as the code and dependencies are already configured!)*
 
