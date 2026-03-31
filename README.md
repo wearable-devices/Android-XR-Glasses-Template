@@ -1,8 +1,5 @@
 # AI Glasses Development Guide
 
-**Author:** Niv Avidan  
-**Date:** March 2026  
-
 *A step-by-step guide for setting up and building AI Glasses apps using Android Studio and the Android XR emulator.*
 
 ---
@@ -62,7 +59,13 @@ If you don't want to configure a project manually from scratch, you can clone th
 2. Copy the repo URL and run: `git clone https://github.com/wearable-devices/AndroidAIGlassesTemplate.git`
 3. Open the cloned folder in Android Studio Canary.
 
-*(Note: If you use the template, you can skip straight to **[Section 5: Android Virtual Device (AVD) Creation](#section-5-android-virtual-device-avd-creation)**, as the code and dependencies are already configured!)*
+*(Note: If you clone this repo, you can skip straight to **[Section 6: Android Virtual Device (AVD) Creation](#section-6-android-virtual-device-avd-creation)**, as the code and dependencies are already configured!)*
+
+After cloning, rename the project to match your app:
+
+4. **App name:** Open `app/src/main/res/values/strings.xml` and update the `app_name` value.
+5. **Package name:** In Android Studio, right-click the `com.example.template` package → **Refactor > Rename** and enter your new package name. Android Studio will update all references automatically.
+6. **Application ID:** Open `app/build.gradle.kts` and update the `applicationId` field to match your new package name.
 
 ---
 
