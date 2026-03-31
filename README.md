@@ -35,7 +35,7 @@ To develop for AI Glasses, you must use **Android Studio Canary**.
 2. Click on **Settings** in the bottom left corner.
 3. Navigate to **Languages & Frameworks > Android SDK**.
 
-![SDK Settings](images/SDK.png)
+![SDK Settings](docs/SDK.png)
 
 4. Under the **SDK Platforms** tab, ensure you have installed an SDK with a minimum **API Level of 36**.
 5. Switch to the **SDK Tools** tab and check the boxes for the following components:
@@ -44,7 +44,7 @@ To develop for AI Glasses, you must use **Android Studio Canary**.
    - **Android SDK Platform-Tools**
    - **Layout Inspector image server for API 31-36**
 
-![SDK Tools](images/SDK_Tools.png)
+![SDK Tools](docs/SDK_Tools.png)
 
 6. Click **Apply** to download and install the components.
 
@@ -64,15 +64,15 @@ If you don't want to configure a project manually from scratch, you can clone th
 After cloning, rename the project to match your app:
 
 4. **App name:** Open `app/res/values/strings.xml` and update the `app_name` value.
-![Rename app name](images/Rename_app_name.png)
+![Rename app name](docs/Rename_app_name.png)
 5. **Package name:** In Android Studio, right-click the `com.example.template` package → **Rename**.
-![Rename package](images/Rename_Package.png)
+![Rename package](docs/Rename_Package.png)
 A pop-up window will open. Click All Directories.
-![All_Directories](images/All_Directories.png)
+![All_Directories](docs/All_Directories.png)
 Choose your new package name and Click **Refactor**. Android Studio will update all references automatically.
-![Package_Refactor](images/Package_Refactor.png)
+![Package_Refactor](docs/Package_Refactor.png)
 6. **Application ID:** Open `Gradle Scripts/build.gradle.kts (Module: App` and update the `applicationId` field to match your new package name.
-![Application_ID](images/Application_Id.png)
+![Application_ID](docs/Application_Id.png)
 7. Run your project.
 
 ---
@@ -82,12 +82,12 @@ Choose your new package name and Click **Refactor**. Android Studio will update 
 2. On the template list go to  **XR**.
 3. Choose **Basic AI Glasses Activity**
 
-![Project Template](images/Project_Template.png)
+![Project Template](docs/Project_Template.png)
 
 4. Click **Next**
 5. Click **Finish**
 
-![Project Template](images/Project_Defaults.png)
+![Project Template](docs/Project_Defaults.png)
 
 ---
 
@@ -133,7 +133,7 @@ dependencies {
 ```
 
 3. Click **Sync Now** At the top of the page to download the new Gradle configuration.
-![Sync Now](images/Sync_Now.png)
+![Sync Now](docs/Sync_Now.png)
 
 ### 5.3. AndroidManifest.xml
 
@@ -160,18 +160,18 @@ In order to test and run your app on the emulator, you will need to create an **
 Because AI Glasses act as a paired companion device, you must first create a standard mobile phone AVD to host the connection.
 
 1. Go to **View -> Tool Windows -> Device Manager**
-![Device Manager](images/Device_Manager.png)
+![Device Manager](docs/Device_Manager.png)
 2. Click **Create Virtual Device** (the `+` icon).
-![Create Virtual Device](images/Add_AVD.png)
+![Create Virtual Device](docs/Add_AVD.png)
 3. Click **Create Virtual Device**
 4. Under the **Phone** category, select a modern device profile (like a Pixel 9 Pro).
-![Phone Profile](images/Phone_Profile.png)
+![Phone Profile](docs/Phone_Profile.png)
 5. Click **Next**
 6. Under the API selection dropdown choose **Show All**.
 7. For the system image, select the **CANARY** (or API 36 / Baklava) build:
    - **For Mac (Apple Silicon):** Choose the `arm64-v8a` system image.
    - **For Windows / Intel Macs:** Choose the `x86_64` system image.
-![System Image Selection](images/API_Canary.png)
+![System Image Selection](docs/API_Canary.png)
 8. Click **Finish**.
 
 ### 6.2. AI Glasses AVD
@@ -179,15 +179,15 @@ Because AI Glasses act as a paired companion device, you must first create a sta
 Now, create the companion emulator for the glasses themselves:
 
 1. Go to **View -> Tool Windows -> Device Manager**
-![Device Manager](images/Device_Manager.png)
+![Device Manager](docs/Device_Manager.png)
 2. Click **Create Virtual Device** (the `+` icon).
-![Create Virtual Device](images/Add_AVD.png)
+![Create Virtual Device](docs/Add_AVD.png)
 3. Click **Create Virtual Device**
 4. In the device category list, locate and select the **XR** category.
-![XR Category](images/AI_Glasses_Profile.png)
+![XR Category](docs/AI_Glasses_Profile.png)
 5. Click **Next**
 6. In the system image selection page leave everything as is.
-![System Image Selection](images/AI_Glasses_System_Image.png)
+![System Image Selection](docs/AI_Glasses_System_Image.png)
 7. Click **Finish**
 
 
@@ -195,7 +195,7 @@ Now, create the companion emulator for the glasses themselves:
 
 1. Launch **both** the Phone AVD and the AI Glasses AVD from your **Device Manager** by clicking the **Run** (Play) button.
 2. Still in the **Device Manager**, click the three dots next to the **AI Glasses** AVD and click **Pair Glasses**.
-![Pair Glasses](images/Pair_Glasses.png)
+![Pair Glasses](docs/Pair_Glasses.png)
 3. Choose your **Phone AVD** and click **Next**.
 4. Follow the steps inside the **Companion App** on the **Phone AVD** to complete the pairing.
 
@@ -212,7 +212,7 @@ With your devices paired, you can now run your application on the emulator!
 4. Wait for the app to build and install. 
 5. Press the **Power** button on the glasses emulator.
 6. Press the **Launch** button on the **Phone** emulator.
-![Run App](images/Run_App.png)
+![Run App](docs/Run_App.png)
 
 ---
 
@@ -227,7 +227,7 @@ In your `GlassesMainActivity.kt`'s `onCreate()` function, right before `setConte
 ```kotlin
 window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 ```
-![Remove White Corners](images/Remove_White_Corners.png)
+![Remove White Corners](docs/Remove_White_Corners.png)
 
 **Remove Borders from your Compose Container:**  
 When using Glimmer or Jetpack Compose `Surface` or `Card`, ensure you explicitly set the shape and border:
@@ -240,7 +240,7 @@ When using Glimmer or Jetpack Compose `Surface` or `Card`, ensure you explicitly
          // Your UI here
       }
 ```
-![Remove Box Border](images/Remove_Box_Border.png)
+![Remove Box Border](docs/Remove_Box_Border.png)
 
 ### 2. Keep the Emulator Awake (Disable Sleep Timer)
 
